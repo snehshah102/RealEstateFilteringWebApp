@@ -71,8 +71,7 @@ const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title
 export default PropertyDetails;
 
 export async function getServerSideProps({ params: { id }}) {
-    const data = await fetchApi('${baseUrl}/properties/detail?locationexternalIDs=${id}');
-
+    const data = await fetchApi();
 return {
     props: {
         propertyDetails: data
